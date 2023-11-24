@@ -34,7 +34,7 @@ pipeline {
                sh 'mvn  test'
             }
          }
-        stage('checkstyle analys')\
+        stage('checkstyle analys')
         {
           steps
           {
