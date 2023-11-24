@@ -16,21 +16,58 @@ pipeline {
    }
 
    stages {
-      stage('git checkout') {') { 
+      stage('build') {
          steps {
-            sh 'mvn clean package'
+            sh 'mvn -s settings.xml clean package'
          }
-      }
-      stage('Test') { 
-         steps {
-            sh 'mvn test'
+         post {
+            success {
+               echo 'build success'
+               archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+            }
+            failure {
+               echo 'build failed'
+            }
          }
-      }
-      stage('Deploy') { 
-         steps {
-            sh 'mvn deploy'
+         stage('test') {
+            steps {
+               sh 'mvn  test'
+            }
          }
+        stage('checkstyle analys')\
+        {
+          steps
+          {
+            sh 'mvn checkstyle:checkstyle'
+          }
+        }
+    
+
+                    
+
+
+
       }
-   }     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
