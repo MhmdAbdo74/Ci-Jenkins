@@ -29,6 +29,7 @@ pipeline {
                echo 'build failed'
             }
          }
+      }
          stage('test') {
             steps {
                sh 'mvn  test'
