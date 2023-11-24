@@ -15,7 +15,7 @@ pipeline {
       NEXUS_LOGIN = 'nexus'  
    }
 
-   stages {
+   stages{
       stage('build') {
          steps {
             sh 'mvn -s settings.xml clean package'
