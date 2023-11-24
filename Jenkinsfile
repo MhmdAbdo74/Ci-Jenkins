@@ -10,7 +10,7 @@ pipeline {
       NEXUS_USER = 'admin'
       NEXUS_PASSWORD = '12'
       RELEASE_REPO = 'vprofile-release'
-      NEXUSIP='172.31.89.205'
+      NEXUSIP='44.203.64.106'
       NEXUSPORT='8081'
       NEXUS_LOGIN = 'nexus'  
    }
