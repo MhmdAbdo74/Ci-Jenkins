@@ -66,6 +66,13 @@ pipeline {
               }
             }
         }
+        stage('quality gate') {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate abortPipeline: true //It's a blocking step, this pipeline will wait until the SonarQube analysis is completed
+                }
+            }
+        }
 
    }
 }
