@@ -56,7 +56,6 @@ pipeline {
 
             steps {
                withSonarQubeEnv("${SONARSERVER}") {
-                   sh 'javac -source 1.8 -target 1.8 YourJavaFile.java'
                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
                    -Dsonar.projectName=vprofile \
                    -Dsonar.projectVersion=1.0 \
