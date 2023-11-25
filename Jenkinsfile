@@ -10,12 +10,12 @@ pipeline {
       NEXUS_USER = 'admin'
       NEXUS_PASS = '12'
       RELEASE_REPO = 'vprofile-release'
-      NEXUSIP='172.31.89.205'
+      NEXUSIP='44.203.64.106'
       NEXUSPORT='8081'
       CENTRAL_REPO='vpro-maven-central'
       NEXUS_GRP_REPO='vpro-maven-group'
       NEXUS_LOGIN = 'nexus'
-      SONARSERVER = 'sonarserver'
+      SONARSERVER = 'sonarsever'sonarserver
       SONARSCANNER = 'sonarscanner'  
    }
 
