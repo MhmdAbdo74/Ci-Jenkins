@@ -47,7 +47,7 @@ pipeline {
           }
         }
 
-      }
+      
 
               stage('Sonar Analysis') {
 
@@ -64,6 +64,7 @@ pipeline {
               }
             }
         }
+   }
    }
 
 
