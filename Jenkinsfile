@@ -86,7 +86,7 @@ pipeline {
         credentialsId: "${NEXUS_LOGIN}",
         artifacts: [
             [artifactId: 'vproap',
-             : '',
+             classifier: '',
              file: 'target/vprofile-v2.war',
              type: 'war']
         ]
