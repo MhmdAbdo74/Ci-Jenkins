@@ -115,5 +115,3 @@ pipeline {
    }
         
 }        
-//last chnge by DevOps_Hero
-............. wex 
